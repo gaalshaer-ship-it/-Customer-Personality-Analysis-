@@ -1,118 +1,44 @@
-# Customer Personality Analysis - Machine Learning Project
+# Customer Personality Analysis
 
-## Project Overview
-This project analyzes customer data to understand customer behavior and spending patterns. Machine learning techniques were used to predict spending, classify customer responses, and segment customers into groups.
-
----
-
-## 1. Data Cleaning
-In this step, I cleaned the dataset by:
-- Handling missing values in the Income column
-- Removing or filtering unrealistic values in Age and Income
-- Making sure the dataset is consistent and ready for analysis
+## Project Summary
+This project analyzes customer data using machine learning to understand behavior, predict spending, classify responses, and group customers.
 
 ---
 
-## 2. Feature Engineering
-I created new features to improve the analysis:
-- **Age** = calculated from Year_Birth
-- **TotalSpending** = total spending across all product categories
-- **TotalChildren** = sum of Kidhome and Teenhome
+## Steps
 
-These features helped in better understanding customer behavior.
+### Data Cleaning
+- Handled missing values
+- Removed unrealistic data
 
----
+### Feature Engineering
+- Created Age, TotalSpending, TotalChildren
 
-## 3. Exploratory Data Analysis (EDA)
-I explored the data using different visualizations:
-- Histograms to understand data distribution
-- Boxplots to detect outliers
-- Pairplots to understand relationships between variables
+### EDA
+- Visualized data distributions and relationships
+- Detected outliers
 
-From the analysis, I noticed that:
-- Income has a right-skewed distribution
-- Some outliers exist in Income and Age
+### Regression
+- Linear, Ridge, Decision Tree
+- Best: Decision Tree
 
----
+### Classification
+- Logistic, KNN, Random Forest
+- Best: Random Forest
 
-## 4. Regression Models
-I used regression models to predict customer TotalSpending:
-
-Models used:
-- Linear Regression
-- Ridge Regression
-- Decision Tree Regressor
-
-### Results:
-- Linear Regression explained most of the variance (R² ≈ 0.815)
-- Ridge Regression gave similar results
-- Decision Tree performed the best (R² ≈ 0.846)
-
-So, the Decision Tree model was selected as the best regression model.
+### Clustering
+- K-Means with k=3
+- Grouped customers into 3 segments
 
 ---
 
-## 5. Classification Models
-I used classification models to predict whether a customer responds to a campaign (Response).
-
-Models used:
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Random Forest
-
-### Evaluation metrics:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-
-### Results:
-- Random Forest gave the highest accuracy
-- Logistic Regression had better recall for detecting positive class
-- KNN performed lower compared to other models
-
-Due to class imbalance, recall was also an important metric to consider.
+## Conclusion
+The project shows how machine learning can help understand and segment customers for better decisions.
 
 ---
 
-## 6. Clustering (Customer Segmentation)
-I used K-Means clustering to group customers based on:
-- Income
-- Age
-- TotalSpending
-- TotalChildren
-
-### Steps:
-- Data scaling using StandardScaler
-- Elbow method to find optimal number of clusters
-- Chose k = 3
-- Applied K-Means clustering
-
-### Cluster Results:
-- High-income high-spending customers
-- Middle/family-oriented customers
-- Low-income low-spending customers
-
-Each cluster represents a different customer behavior group.
-
----
-
-## 7. Conclusion
-This project helped me understand how machine learning can be used in real-life customer analysis. It showed how we can:
-- Clean and prepare data
-- Build predictive models
-- Classify customer behavior
-- Segment customers into meaningful groups
-
----
-
-## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+## Libraries Used
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 
 ## Done by
 Machine Learning Student Project
